@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 3000;
 
 // Configuração do CORS
 app.use(cors({
-  origin: 'https://desafio-trilha-front-end.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: "https://desafio-trilha-front-end.vercel.app",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 
