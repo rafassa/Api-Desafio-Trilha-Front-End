@@ -1,10 +1,11 @@
 import express from "express";
 import cors from "cors";
 import { fileURLToPath } from "url";
-import { dirname } from "path"; // Adicionando a importação do 'path'
+import path from "path";
 
+// Corrige a definição de __dirname no ambiente ES Modules
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 // Configuração do CORS
 app.use(cors({
   origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type'],
   exposedHeaders: ['Content-Length']
 }));
@@ -20,8 +21,7 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Servindo a pasta de imagens corretamente
-app.use('/img', express.static(path.join(__dirname, 'img'))); // Agora o 'path' foi definido corretamente
-
+app.use('/img', express.static(path.join(__dirname, 'img')));
 
 // 📌 Rota de fretes
 const frete = [
@@ -108,4 +108,6 @@ const resposta = [
 app.get("/produtos", (req, res) => res.json(resposta));
 
 // Inicializa o servidor
-app.listen(PORT, () => console.log(`✅ Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`✅ Servidor rodando na porta ${PORT}`);
+});
