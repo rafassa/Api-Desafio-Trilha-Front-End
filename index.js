@@ -24,12 +24,12 @@ app.use('/img', express.static(path.join(__dirname, 'img')));
 
 // 📌 Rota de produtos
 const resposta = [
-  { nome: "Filtro de óleo", preco: 50, quantidade: 1, img: "/img/filtro.png" },
-  { nome: "Pastilhas de freio", preco: 190, quantidade: 1, img: "/img/pastilha.png" },
-  { nome: "Bateria", preco: 550, quantidade: 1, img: "/img/bateria.png" },
-  { nome: "Correia dentada", preco: 120, quantidade: 1, img: "/img/correia.png" },
-  { nome: "Amortecedores", preco: 437, quantidade: 1, img: "/img/amortecedor.png" },
-  { nome: "Velas de ignição", preco: 600, quantidade: 1, img: "/img/ignicao.png" },
+  { nome: "Filtro de óleo", preco: 50, quantidade: 1, img: "/filtro.png" },
+  { nome: "Pastilhas de freio", preco: 190, quantidade: 1, img: "/pastilha.png" },
+  { nome: "Bateria", preco: 550, quantidade: 1, img: "/bateria.png" },
+  { nome: "Correia dentada", preco: 120, quantidade: 1, img: "/correia.png" },
+  { nome: "Amortecedores", preco: 437, quantidade: 1, img: "/amortecedor.png" },
+  { nome: "Velas de ignição", preco: 600, quantidade: 1, img: "/ignicao.png" },
 ];
 
 app.get("/", (req, res) => res.json(resposta));
@@ -60,10 +60,10 @@ app.post("/login", (req, res) => {
 
 // 📌 Rota de veículos
 const vehicles = [
-  { id: 1, vehicle: "Ranger", volumetotal: 145760, connected: 70000, softwareUpdates: 27550, img: "/img/ranger.png" },
-  { id: 2, vehicle: "Mustang", volumetotal: 1500, connected: 500, softwareUpdates: 750, img: "/img/mustang.png" },
-  { id: 3, vehicle: "Territory", volumetotal: 4560, connected: 4000, softwareUpdates: 3050, img: "/img/territory.png" },
-  { id: 4, vehicle: "Bronco Sport", volumetotal: 7560, connected: 4060, softwareUpdates: 2050, img: "/img/broncoSport.png" },
+  { id: 1, vehicle: "Ranger", volumetotal: 145760, connected: 70000, softwareUpdates: 27550, img: "/ranger.png" },
+  { id: 2, vehicle: "Mustang", volumetotal: 1500, connected: 500, softwareUpdates: 750, img: "/mustang.png" },
+  { id: 3, vehicle: "Territory", volumetotal: 4560, connected: 4000, softwareUpdates: 3050, img: "/territory.png" },
+  { id: 4, vehicle: "Bronco Sport", volumetotal: 7560, connected: 4060, softwareUpdates: 2050, img: "/broncoSport.png" },
 ];
 
 app.get("/vehicles", (req, res) => res.json({ vehicles }));
@@ -89,18 +89,18 @@ app.post("/vehicleData", (req, res) => {
 });
 
 const carouselImg =[
-  {img: "/img/XLCabine.png", descricao:"Esta é a nova Ranger Ford 2022.Verifique as novidades"},
-  {img: "/img/xlsdiesel.png", descricao:"Ford a nossa historia"},
-  {img: "/img/storm.png", descricao:"Nova Ford Bronco Sport 2022"},
+  {img: "/XLCabine.png", descricao:"Esta é a nova Ranger Ford 2022.Verifique as novidades"},
+  {img: "/xlsdiesel.png", descricao:"Ford a nossa historia"},
+  {img: "/storm.png", descricao:"Nova Ford Bronco Sport 2022"},
 ]
 app.get("/carouselImg", (req, res) => res.json(carouselImg));
 
 
 
 const lancamentoCarros =[
-  {id:0, img: "/img/XLCabine.png", modelo:"XL", preco:"132.000", alturaCacamba:"511",alturaVeiculo:"1821", AlturaLivre:"232", capacidadeCarga:"1234",motor:"2.2",potencia:"160",volumeCacamba:"1420",roda:"Aço Estampado 16"},
-  {id:1, img: "/img/xlsdiesel.png",modelo:"xls", preco:"150.000", alturaCacamba:"511",alturaVeiculo:"1821", AlturaLivre:"232", capacidadeCarga:"1076",motor:"2.2",potencia:"160",volumeCacamba:"1180",roda:"Aço Estampado 16"},
-  {id:2, img: "/img/storm.png", modelo:"Storm", preco:"172.000", alturaCacamba:"511",alturaVeiculo:"1821", AlturaLivre:"232", capacidadeCarga:"1040",motor:"3.2",potencia:"200",volumeCacamba:"1180",roda:"Liga Leve 17"},
+  {id:0, img: "/XLCabine.png", modelo:"XL", preco:"132.000", alturaCacamba:"511",alturaVeiculo:"1821", AlturaLivre:"232", capacidadeCarga:"1234",motor:"2.2",potencia:"160",volumeCacamba:"1420",roda:"Aço Estampado 16"},
+  {id:1, img: "/xlsdiesel.png",modelo:"xls", preco:"150.000", alturaCacamba:"511",alturaVeiculo:"1821", AlturaLivre:"232", capacidadeCarga:"1076",motor:"2.2",potencia:"160",volumeCacamba:"1180",roda:"Aço Estampado 16"},
+  {id:2, img: "/storm.png", modelo:"Storm", preco:"172.000", alturaCacamba:"511",alturaVeiculo:"1821", AlturaLivre:"232", capacidadeCarga:"1040",motor:"3.2",potencia:"200",volumeCacamba:"1180",roda:"Liga Leve 17"},
 ]
 
 
