@@ -20,7 +20,7 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Servindo a pasta de imagens corretamente
-app.use('/img', express.static(resolve(__dirname, 'img')));
+app.use('/img', express.static(path.join(__dirname, 'img')));
 
 // 📌 Rota de fretes
 const frete = [
