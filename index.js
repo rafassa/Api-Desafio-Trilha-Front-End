@@ -11,16 +11,16 @@ const PORT = process.env.PORT || 3000;
 
 // Configuração do CORS
 app.use(cors({
-  origin: "https://desafio-trilha-front-end.vercel.app",
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: ['Content-Type'],
+  exposedHeaders: ['Content-Length']
 }));
-
 
 app.use(express.json());
 
 // ✅ Servindo a pasta de imagens corretamente
-app.use('/img', express.static(join(__dirname, 'img')));
+app.use('/img', express.static(resolve(__dirname, 'img')));
 
 // 📌 Rota de fretes
 const frete = [
