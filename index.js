@@ -24,12 +24,12 @@ app.use('/img', express.static(path.join(__dirname, 'img')));
 
 // 📌 Rota de produtos
 const resposta = [
-  { nome: "Filtro de óleo", preco: 50, quantidade: 1, img: "/filtro.png" },
-  { nome: "Pastilhas de freio", preco: 190, quantidade: 1, img: "/pastilha.png" },
-  { nome: "Bateria", preco: 550, quantidade: 1, img: "/bateria.png" },
-  { nome: "Correia dentada", preco: 120, quantidade: 1, img: "/correia.png" },
-  { nome: "Amortecedores", preco: 437, quantidade: 1, img: "/amortecedor.png" },
-  { nome: "Velas de ignição", preco: 600, quantidade: 1, img: "/ignicao.png" },
+  { img: "/filtro.png", nome: "Filtro de óleo", preco: 50, quantidade: 1,  },
+  { img: "/pastilha.png",nome: "Pastilhas de freio", preco: 190, quantidade: 1,  },
+  { img: "/bateria.png", nome: "Bateria", preco: 550, quantidade: 1, },
+  { img: "/correia.png", nome: "Correia dentada", preco: 120, quantidade: 1,  },
+  { img: "/amortecedor.png",nome: "Amortecedores", preco: 437, quantidade: 1,  },
+  { img: "/ignicao.png", nome: "Velas de ignição", preco: 600, quantidade: 1,  },
 ];
 
 app.get("/produtos", (req, res) => res.json(resposta));
