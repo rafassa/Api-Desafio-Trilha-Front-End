@@ -49,10 +49,10 @@ app.post("/login", (req, res) => {
 
 // 📌 Rota de veículos
 const vehicles = [
-  { id: 1, vehicle: "Ranger", volumetotal: 145760, connected: 70000, softwareUpdates: 27550, img: "/img/ranger.png" },
-  { id: 2, vehicle: "Mustang", volumetotal: 1500, connected: 500, softwareUpdates: 750, img: "/img/mustang.png" },
-  { id: 3, vehicle: "Territory", volumetotal: 4560, connected: 4000, softwareUpdates: 3050, img: "/img/territory.png" },
-  { id: 4, vehicle: "Bronco Sport", volumetotal: 7560, connected: 4060, softwareUpdates: 2050, img: "/img/broncoSport.png" },
+  { id: 1, vehicle: "Ranger", volumetotal: 145760, connected: 70000, softwareUpdates: 27550, img: "https://api-desafio-trilha-front-end.onrender.com/img/ranger.png" },
+  { id: 2, vehicle: "Mustang", volumetotal: 1500, connected: 500, softwareUpdates: 750, img: "https://api-desafio-trilha-front-end.onrender.com/img/mustang.png" },
+  { id: 3, vehicle: "Territory", volumetotal: 4560, connected: 4000, softwareUpdates: 3050, img: "https://api-desafio-trilha-front-end.onrender.com/img/territory.png" },
+  { id: 4, vehicle: "Bronco Sport", volumetotal: 7560, connected: 4060, softwareUpdates: 2050, img: "https://api-desafio-trilha-front-end.onrender.com/img/broncoSport.png" },
 ];
 
 app.get("/vehicles", (req, res) => res.json({ vehicles }));
@@ -79,30 +79,30 @@ app.post("/vehicleData", (req, res) => {
 
 // 📌 Rota de imagens do carousel
 const carouselImg = [
-  { img: "/img/XLCabine.png", descricao: "Esta é a nova Ranger Ford 2022. Verifique as novidades" },
-  { img: "/img/xlsdiesel.png", descricao: "Ford a nossa história" },
-  { img: "/img/storm.png", descricao: "Nova Ford Bronco Sport 2022" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/XLCabine.png", descricao: "Esta é a nova Ranger Ford 2022. Verifique as novidades" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/xlsdiesel.png", descricao: "Ford a nossa história" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/storm.png", descricao: "Nova Ford Bronco Sport 2022" },
 ];
 
 app.get("/carouselImg", (req, res) => res.json(carouselImg));
 
 // 📌 Rota de lançamentos de carros
 const lancamentoCarros = [
-  { id: 0, img: "/img/XLCabine.png", modelo: "XL", preco: "132.000" },
-  { id: 1, img: "/img/xlsdiesel.png", modelo: "xls", preco: "150.000" },
-  { id: 2, img: "/img/storm.png", modelo: "Storm", preco: "172.000" },
+  { id: 0, img: "https://api-desafio-trilha-front-end.onrender.com/img/XLCabine.png", modelo: "XL", preco: "132.000" },
+  { id: 1, img: "https://api-desafio-trilha-front-end.onrender.com/img/xlsdiesel.png", modelo: "xls", preco: "150.000" },
+  { id: 2, img: "https://api-desafio-trilha-front-end.onrender.com/img/storm.png", modelo: "Storm", preco: "172.000" },
 ];
 
 app.get("/lancamentoCarros", (req, res) => res.json(lancamentoCarros));
 
 // 📌 Rota de produtos (corrigido)
 const resposta = [
-  { img: "/img/filtro.png", nome: "Filtro de óleo", preco: 50, quantidade: 1 },
-  { img: "/img/pastilha.png", nome: "Pastilhas de freio", preco: 190, quantidade: 1 },
-  { img: "/img/bateria.png", nome: "Bateria", preco: 550, quantidade: 1 },
-  { img: "/img/correia.png", nome: "Correia dentada", preco: 120, quantidade: 1 },
-  { img: "/img/amortecedor.png", nome: "Amortecedores", preco: 437, quantidade: 1 },
-  { img: "/img/ignicao.png", nome: "Velas de ignição", preco: 600, quantidade: 1 },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/filtro.png", nome: "Filtro de óleo", preco: 50, quantidade: 1 },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/pastilha.png", nome: "Pastilhas de freio", preco: 190, quantidade: 1 },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/bateria.png", nome: "Bateria", preco: 550, quantidade: 1 },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/correia.png", nome: "Correia dentada", preco: 120, quantidade: 1 },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/amortecedor.png", nome: "Amortecedores", preco: 437, quantidade: 1 },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/ignicao.png", nome: "Velas de ignição", preco: 600, quantidade: 1 },
 ];
 
 app.get("/produtos", (req, res) => res.json(resposta));
