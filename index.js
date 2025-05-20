@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use( express.static(path.join(__dirname)));
 
 
 // 📌 Rota de produtos
