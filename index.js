@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { fileURLToPath } from "url";
-import { dirname, } from "path";
+import { dirname } from "path"; // Adicionando a importação do 'path'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,7 +20,8 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Servindo a pasta de imagens corretamente
-app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/img', express.static(path.join(__dirname, 'img'))); // Agora o 'path' foi definido corretamente
+
 
 // 📌 Rota de fretes
 const frete = [
