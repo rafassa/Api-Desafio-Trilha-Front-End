@@ -32,7 +32,7 @@ const resposta = [
   { nome: "Velas de ignição", preco: 600, quantidade: 1, img: "/ignicao.png" },
 ];
 
-app.get("/", (req, res) => res.json(resposta));
+app.get("/produtos", (req, res) => res.json(resposta));
 
 // 📌 Rota de fretes
 const frete = [
