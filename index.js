@@ -89,10 +89,50 @@ app.get("/carouselImg", (req, res) => res.json(carouselImg));
 
 // 📌 Rota de lançamentos de carros
 const lancamentoCarros = [
-  { id: 0, img: "https://api-desafio-trilha-front-end.onrender.com/img/XLCabine.png", modelo: "XL", preco: "132.000" },
-  { id: 1, img: "https://api-desafio-trilha-front-end.onrender.com/img/xlsdiesel.png", modelo: "xls", preco: "150.000" },
-  { id: 2, img: "https://api-desafio-trilha-front-end.onrender.com/img/storm.png", modelo: "Storm", preco: "172.000" },
-];
+  { 
+    "id": 0, 
+    "img": "https://api-desafio-trilha-front-end.onrender.com/img/XLCabine.png", 
+    "modelo": "XL Cabine Simples 2.2 Diesel 4X4 MT 2022", 
+    "preco": "183.850",
+    "cacamba": "511", 
+    "altura": "1821", 
+    "solo": "232", 
+    "capacidade": "1076", 
+    "moto": "2.2", 
+    "potencia": "160", 
+    "volume": "1180", 
+    "roda": "Aço Estampado 16" 
+  },
+  { 
+    "id": 1, 
+    "img": "https://api-desafio-trilha-front-end.onrender.com/img/xlsdiesel.png", 
+    "modelo": "XLS 2.2 Diesel 4X4 AT 2022", 
+    "preco": "220.690",
+    "cacamba": "511", 
+    "altura": "1821", 
+    "solo": "232", 
+    "capacidade": "1076", 
+    "moto": "2.2", 
+    "potencia": "160", 
+    "volume": "1180", 
+    "roda": "Aço Estampado 16" 
+  },
+  { 
+    "id": 2, 
+    "img": "https://api-desafio-trilha-front-end.onrender.com/img/storm.png", 
+    "modelo": "Storm 3.2 Diesel 4X4 AT 2022", 
+    "preco": "222.790",
+    "cacamba": "511", 
+    "altura": "1821", 
+    "solo": "232", 
+    "capacidade": "1040", 
+    "moto": "3.2", 
+    "potencia": "200", 
+    "volume": "1180", 
+    "roda": "Liga Leve 17" 
+  }
+]
+
 
 app.get("/lancamentoCarros", (req, res) => res.json(lancamentoCarros));
 
