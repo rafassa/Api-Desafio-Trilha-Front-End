@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { fileURLToPath } from "url";
 import path from "path";
+import { link } from "fs";
 
 // Corrige a definição de __dirname no ambiente ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -79,9 +80,9 @@ app.post("/vehicleData", (req, res) => {
 
 // 📌 Rota de imagens do carousel
 const carouselImg = [
-  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_1.jpg", descricao: "Esta é a nova Ranger Ford 2022" },
-  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_2.jpg", descricao: "Ford a nossa história" },
-  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_3.jpg", descricao: "Nova Ford Bronco Sport 2022" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_1.jpg", descricao: "Esta é a nova Ranger Ford 2022", link:"https://ford-enter-trilha.netlify.app/lancamento"},
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_2.jpg", descricao: "Ford a nossa história", link:"https://www.ford.pt/experiencia-ford/ford-blog/o-nosso-legado"},
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_3.jpg", descricao: "Nova Ford Bronco Sport 2022", link:"https://ford-enter-trilha.netlify.app/lancamento" },
 ];
 
 app.get("/carouselImg", (req, res) => res.json(carouselImg));
