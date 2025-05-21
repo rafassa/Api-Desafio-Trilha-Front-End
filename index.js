@@ -79,9 +79,9 @@ app.post("/vehicleData", (req, res) => {
 
 // 📌 Rota de imagens do carousel
 const carouselImg = [
-  { img: "https://api-desafio-trilha-front-end.onrender.com/img/XLCabine.png", descricao: "Esta é a nova Ranger Ford 2022. Verifique as novidades" },
-  { img: "https://api-desafio-trilha-front-end.onrender.com/img/xlsdiesel.png", descricao: "Ford a nossa história" },
-  { img: "https://api-desafio-trilha-front-end.onrender.com/img/storm.png", descricao: "Nova Ford Bronco Sport 2022" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_1.png", descricao: "Esta é a nova Ranger Ford 2022. Verifique as novidades" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_2.png", descricao: "Ford a nossa história" },
+  { img: "https://api-desafio-trilha-front-end.onrender.com/img/imagem_3.png", descricao: "Nova Ford Bronco Sport 2022" },
 ];
 
 app.get("/carouselImg", (req, res) => res.json(carouselImg));
