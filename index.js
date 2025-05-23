@@ -26,9 +26,9 @@ app.use('/img', express.static(path.join(__dirname, 'img')));
 
 // 📌 Rota de fretes
 const frete = [
-  { nome: "frete1", multiplicador: 1.12 },
-  { nome: "frete2", multiplicador: 1.11 },
-  { nome: "frete3", multiplicador: 1.13 },
+  { nome: "ExpressBox", multiplicador: 1.12 },
+  { nome: "EnvioBusca", multiplicador: 1.11 },
+  { nome: "Flashexpress", multiplicador: 1.13 },
 ];
 
 app.get("/frete", (req, res) => res.json(frete));
